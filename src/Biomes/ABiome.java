@@ -53,28 +53,33 @@ import java.util.*;
 
     //convert a given hex value char to its associated int value
     private int convertHexToDec(String hex) {
-        if(hex.equals("a")) {
-            return 10;
+        int value = 0;
+        switch(hex) {
+            case "a":
+                value = 10;
+                break;
+            case "b":
+                value = 11;
+                break;
+            case "c":
+                value = 12;
+                break;
+            case "d":
+                value = 13;
+            case "e":
+                value = 14;
+                break;
+            case "f":
+                value = 15;
+                break;
+            default:
+                value = Integer.parseInt(hex);
+                break;
         }
-        else if(hex.equals("b")) {
-            return 11;
-        }
-        else if(hex.equals("c")) {
-            return 12;
-        }
-        else if(hex.equals("d")) {
-            return 13;
-        }
-        else if(hex.equals("e")) {
-            return 14;
-        }
-        else if(hex.equals("f")) {
-            return 15;
-        }
-        else {
-            return (Integer.parseInt(hex));
-        }
+        return value;
     }
+
+
 
     //creates image of cell based
     private Image renderCell() {
