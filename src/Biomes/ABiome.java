@@ -3,19 +3,21 @@ import java.awt.*;
 import java.util.*;
 
  public abstract class ABiome {
-     Color baseColor;
-     int x;
-     int y;
-     boolean isWater;
-     boolean hasTrees;
-     boolean hasMountains;
+     private Color baseColor;
+     private int x;
+     private int y;
+     private boolean isWater;
+     private int treeDensity;
+     private boolean hasMountains;
+     private boolean hasHills;
+
 
 
     //Ocean constructor
     ABiome(Color color, boolean waterFlag, String posn) {
         this.baseColor = color;
         this.isWater = waterFlag;
-        this.hasTrees = false;
+        this.treeDensity = 0;
         this.hasMountains = false;
         this.x = this.getX(posn);
         this.y = this.getY(posn);
@@ -23,7 +25,15 @@ import java.util.*;
     }
 
     //Land Constructor
-    ABiome() {
+    ABiome(Color color, boolean isWater, int treeDensity, boolean hasMountains, boolean hasHills, String posn) {
+        this.baseColor = color;
+        this.isWater = isWater;
+        this.treeDensity = treeDensity;
+        this.hasMountains = hasMountains;
+        this.hasHills = hasHills;
+        this.x = this.getX(posn);
+        this.y = this.getY(posn);
+
 
     }
 
@@ -63,6 +73,17 @@ import java.util.*;
         }
         else {
             return (Integer.parseInt(hex));
+        }
+    }
+
+    //creates image of cell based
+    private Image renderCell() {
+        if (this.hasHills) {
+
+        }
+
+        if (this.hasMountains) {
+
         }
     }
 
