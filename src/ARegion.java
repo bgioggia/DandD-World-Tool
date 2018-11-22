@@ -13,8 +13,8 @@ public abstract class ARegion implements IRegion{
 
     //
     public void populateRegionList(String posn) {
-        this.regionList.put("GM", new Glacier(posn));
-        this.regionList.put("MN", new Mountain(posn));
+       // this.regionList.put("GM", new Glacier(posn));
+       // this.regionList.put("MN", new Mountain(posn));
      /*   this.regionList.put("MM", new MixedMountain(posn));
         this.regionList.put("CM", new ConiferousMountain(posn));
         this.regionList.put("DM", new DecidiousMountain(posn));

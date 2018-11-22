@@ -26,12 +26,12 @@ import javax.swing.*;
 
 
      //Constructor
-     ABiome(Color color, int posn, int terrainType, int treeDensity) {
+     ABiome(Color color, int x, int y, int terrainType, int treeDensity) {
          this.baseColor = color;
          this.treeDensity = treeDensity;
          this.terrainType = terrainType;
-         this.x = this.getX(posn);
-         this.y = this.getY(posn);
+         this.x = x;
+         this.y = y;
      }
 
      //Converts the first half of the hex string to a decimal integer
