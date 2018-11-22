@@ -3,13 +3,13 @@ import java.util.*;
 
 public class CompoundRegion extends ARegion {
 
-    CompoundRegion() {
-        super();
+    CompoundRegion(String posn) {
+        super(posn);
     }
 
     @Override
     public Image renderTerrain(String id) {
-        return (Image) (new java.awt.geom.Ellipse2D.Double());
+        return null; //(//Image) (new java.awt.geom.Ellipse2D.Double());
     }
 
     @Override

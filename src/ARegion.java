@@ -2,62 +2,58 @@ import Biomes.*;
 import java.util.*;
 
 public abstract class ARegion implements IRegion{
-
-    HashMap<String, ABiome> regionList = new HashMap<>();
+     String posn;
+     HashMap<String, ABiome> regionList = new HashMap<>();
 
     //Abstract Constructor
-    ARegion() {
-        this.populateRegionList();
-
+    ARegion(String posn) {
+        this.posn = posn;
+        this.populateRegionList(posn);
     }
 
     //
-    public void populateRegionList() {
-        this.regionList.put("GM", new Glacier());
-        this.regionList.put("MN", new Mountain());
-        this.regionList.put("MM", new MixedMountain());
-        this.regionList.put("CM", new ConiferousMountain());
-        this.regionList.put("DM", new DecidiousMountain());
-        this.regionList.put("JM", new JungleMountain());
-        this.regionList.put("JH", new JungleHills());
-        this.regionList.put("ST", new Steppe());
-        this.regionList.put("ZH", new FrozenHills());
-        this.regionList.put("HL", new Hills());
-        this.regionList.put("CH", new ConiferousHills());
-        this.regionList.put("DH", new DecidiousHills());
-        this.regionList.put("XH", new DeadHills());
-        this.regionList.put("BD", new Badlands());
-        this.regionList.put("SH", new ShurblandHills());
-        this.regionList.put("GH", new GrassyHills());
-        this.regionList.put("IH", new MixedHills());
-        this.regionList.put("DN", new SandDunes());
-        this.regionList.put("FF", new FrozenForest());
-        this.regionList.put("XF", new DeadForest());
-        this.regionList.put("CF", new ConiferousForest());
-        this.regionList.put("IF", new MixedForest());
-        this.regionList.put("FG", new Fungal());
-        this.regionList.put("DF", new DecidiousForest());
-        this.regionList.put("JG", new Jungle());
-        this.regionList.put("RD", new RockyDesert());
-        this.regionList.put("PF", new PalmForest());
-        this.regionList.put("CD", new ColdDesert());
-        this.regionList.put("SB", new Shrubland());
-        this.regionList.put("SD", new SandyDesert());
-        this.regionList.put("GL", new GrassLand());
-        this.regionList.put("PR", new Praire());
-        this.regionList.put("SL", new SnowField());
-        this.regionList.put("SV", new Savanna());
-        this.regionList.put("GR", new GrazingLand());
-        this.regionList.put("SW", new Swamp());
-        this.regionList.put("JL", new JungleLowlands());
-        this.regionList.put("CW", new ConiferousWetlands());
-        this.regionList.put("RS", new Marsh());
-        this.regionList.put("NG", new Mangrove());
-        this.regionList.put("JW", new JungleWetlands());
-        this.regionList.put("OC", new Ocean());
-
-
+    public void populateRegionList(String posn) {
+        this.regionList.put("GM", new Glacier(posn));
+        this.regionList.put("MN", new Mountain(posn));
+     /*   this.regionList.put("MM", new MixedMountain(posn));
+        this.regionList.put("CM", new ConiferousMountain(posn));
+        this.regionList.put("DM", new DecidiousMountain(posn));
+        this.regionList.put("JM", new JungleMountain(posn));
+        this.regionList.put("JH", new JungleHills(posn));
+        this.regionList.put("ST", new Steppe(posn));
+        this.regionList.put("ZH", new FrozenHills(posn));
+        this.regionList.put("HL", new Hills(posn));
+        this.regionList.put("CH", new ConiferousHills(posn));
+        this.regionList.put("DH", new DecidiousHills(posn));
+        this.regionList.put("XH", new DeadHills(posn));
+        this.regionList.put("BD", new Badlands(posn));
+        this.regionList.put("SH", new ShurblandHills(posn));
+        this.regionList.put("GH", new GrassyHills(posn));
+        this.regionList.put("IH", new MixedHills(posn));
+        this.regionList.put("DN", new SandDunes(posn));
+        this.regionList.put("FF", new FrozenForest(posn));
+        this.regionList.put("XF", new DeadForest(posn));
+        this.regionList.put("CF", new ConiferousForest(posn));
+        this.regionList.put("IF", new MixedForest(posn));
+        this.regionList.put("FG", new Fungal(posn));
+        this.regionList.put("DF", new DecidiousForest(posn));
+        this.regionList.put("JG", new Jungle(posn));
+        this.regionList.put("RD", new RockyDesert(posn));
+        this.regionList.put("PF", new PalmForest(posn));
+        this.regionList.put("CD", new ColdDesert(posn));
+        this.regionList.put("SB", new Shrubland(posn));
+        this.regionList.put("SD", new SandyDesert(posn));
+        this.regionList.put("GL", new GrassLand(posn));
+        this.regionList.put("PR", new Praire(posn));
+        this.regionList.put("SL", new SnowField(posn));
+        this.regionList.put("SV", new Savanna(posn));
+        this.regionList.put("GR", new GrazingLand(posn));
+        this.regionList.put("SW", new Swamp(posn));
+        this.regionList.put("JL", new JungleLowlands(posn));
+        this.regionList.put("CW", new ConiferousWetlands(posn));
+        this.regionList.put("RS", new Marsh(posn));
+        this.regionList.put("NG", new Mangrove(posn));
+        this.regionList.put("JW", new JungleWetlands(posn));
+        this.regionList.put("OC", new Ocean(posn));*/
     }
-
-
 }

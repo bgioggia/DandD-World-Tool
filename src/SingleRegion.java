@@ -3,8 +3,8 @@ import java.util.*;
 
 public class SingleRegion extends ARegion {
 
-    SingleRegion() {
-        super();
+    SingleRegion(String posn) {
+        super(posn);
     }
 
     @Override

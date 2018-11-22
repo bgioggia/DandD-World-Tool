@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class Glacier extends ABiome {
-    public Glacier() {
-        super(Color.BLUE, false, "000000");
+    public Glacier(String posn) {
+        super(new Color(153, 204, 255), posn, 0, 0);
     }
 }
